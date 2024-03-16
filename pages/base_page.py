@@ -1,6 +1,7 @@
 from selenium.common import NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 class BasePage():
@@ -13,6 +14,10 @@ class BasePage():
     def click_element(self, locator):
         print(f"Clicking element: {locator}")
         WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable(locator)).click()
+
+    def hover_on_element(self, locator):
+        element = WebDriverWait(self.browser, 20).until(EC.visibility_of_element_located(locator))
+        ActionChains(self.browser).move_to_element(element).perform()
 
     def open(self):
         self.browser.get(self.url)
