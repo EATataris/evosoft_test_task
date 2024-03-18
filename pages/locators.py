@@ -7,7 +7,6 @@ class MainPageLocators():
     HOME_PAGE_LINK = (By.CSS_SELECTOR, '#link_0')
     NIFTY_BANK_LINK = (By.CSS_SELECTOR, '#tabList_NIFTYBANK')
     VIEW_ALL_LINK = (By.CSS_SELECTOR, 'a[href="/market-data/live-equity-market?symbol=NIFTY BANK"]')
-    # CORPORATE_SECTION = (By.CSS_SELECTOR, '.corporate_section')
 
 
 class PreOpenMarketPageLocators():
@@ -23,4 +22,3 @@ class NiftyBankPageLocators():
 class TwitterElonMuskPageLocators():
     TWITS = (By.XPATH, '//article[@data-testid="tweet"]')
     TWITS_TEXT = (By.XPATH, '//div[@data-testid="tweetText"]')
-    BODY = (By.CSS_SELECTOR, 'body')

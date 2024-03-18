@@ -1,5 +1,4 @@
 import time
-
 from .base_page import BasePage
 from .locators import TwitterElonMuskPageLocators
 
@@ -19,7 +18,6 @@ class TwitterElonMuskPage(BasePage):
             for twit in twits:
                 twit_text = twit.find_elements(*TwitterElonMuskPageLocators.TWITS_TEXT)
                 twit_text_array.append(twit_text[0].text)
-                print(twit_text_array)
 
             for text in twit_text_array:
                 if text not in twit_text_array_unique:
@@ -32,6 +30,5 @@ class TwitterElonMuskPage(BasePage):
         print(twit_text_array_unique)
 
         with open('logfile.txt', 'w') as log_file:
-            # Записываем каждый элемент списка twit_text_array_unique в файл
             for twit_text in twit_text_array_unique:
                 log_file.write(twit_text + '\n')
