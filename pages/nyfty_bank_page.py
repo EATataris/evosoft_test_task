@@ -12,3 +12,4 @@ class NiftyBankPage(BasePage):
         self.browser.execute_script("window.scrollTo({left:0, top:1300, behavior:'smooth'});")
         time.sleep(3)
 
+T

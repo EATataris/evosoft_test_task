@@ -18,3 +18,9 @@ class PreOpenMarketPageLocators():
 
 class NiftyBankPageLocators():
     SELECTOR_LIST = (By.CSS_SELECTOR, '#equitieStockSelect')
+
+
+class TwitterElonMuskPageLocators():
+    TWITS = (By.XPATH, '//article[@data-testid="tweet"]')
+    TWITS_TEXT = (By.XPATH, '//div[@data-testid="tweetText"]')
+    BODY = (By.CSS_SELECTOR, 'body')
