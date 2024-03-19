@@ -40,4 +40,4 @@ https://www.nseindia.com/
 
 5. pip install -r requirements.txt - установить все необходимые пакеты
 6. pytest -s test_task_first.py - Запускаем тестовый файл с первым заданием
-7. pytest -s test_task_ыусщтв.py - Запускаем тестовый файл со вторым заданием
+7. python3 second_task.py - Запускаем файл со вторым заданием
